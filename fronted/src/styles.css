@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+
+.navbar {
+    height: 7vh;
+}
+
+.sidebar {
+    height: 93vh;
+    background-color: red;
+}
+
+.appsidebar {
+    width: 100%;
+}

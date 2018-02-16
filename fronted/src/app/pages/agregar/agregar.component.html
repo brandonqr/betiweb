@@ -1,0 +1,51 @@
+<form ngNativeValidate [formGroup]="forma" (ngSubmit)="registroProducto()">
+    <div class="container">
+        <div class="form-group">
+            <label for="exampleSelect2">Idioma</label>
+            <select formControlName="idioma" name="idioma" class="form-control" id="exampleSelect2">
+        <option value="es">Es</option>
+        <option value="ca" selected>Ca</option>
+        <option value="en">En</option>
+        <option value="de">De</option>
+        <option value="fr">Fr</option>
+      </select>
+        </div>
+        <div class="form-group">
+            <label for="titulo">Titulo</label>
+            <input formControlName="titulo" name="titulo" type="text" class="form-control" id="titulo" aria-describedby="emailHelp" placeholder="Entra un título">
+        </div>
+        <div class="form-group">
+            <label for="exampleTextarea">Descripción</label>
+            <textarea formControlName="descripcion" name="descripcion" class="form-control" id="exampleTextarea" rows="3" placeholder="Entra una descripcion..."></textarea>
+        </div>
+        <div class="form-control">
+            <label class="custom-file">
+                <input (input)="seleccionImagen( $event.target.files[0] )" formControlName="imagen" name="imagen" type="file" >
+                <span class="custom-file-control"></span>
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="titulo">Precio Min</label>
+            <input formControlName="pMin" name="pMin" type="text" class="form-control" id="titulo" aria-describedby="emailHelp" placeholder="entra precio minimo €">
+        </div>
+        <div class="form-group">
+            <label for="titulo">Precio Max</label>
+            <input formControlName="pMax" name="pMax" type="text" class="form-control" id="titulo" aria-describedby="emailHelp" placeholder="entra precio máximo €">
+        </div>
+        <div class="form-group">
+            <label for="titulo">dimensiones</label>
+            <input formControlName="dimensiones" name="dimensiones" type="text" class="form-control" id="titulo" aria-describedby="emailHelp" placeholder="15 x 20">
+        </div>
+        <div class="form-group">
+            <label for="exampleSelect2">Categoría</label>
+            <select formControlName="categoria_id" name="categoria_id" class="form-control" id="exampleSelect2">
+        <option value="1">Bebidas</option>
+        <option value="2">Muebles</option>
+        <option value="3">Ropa</option>
+        <option value="4">Electrodomesticos</option>
+        <option value="5">Mas</option>
+      </select>
+        </div>
+        <button type="Agregar" class="btn btn-primary btn-block">Submit</button>
+    </div>
+</form>
