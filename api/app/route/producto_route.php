@@ -84,6 +84,12 @@ $app->group('/producto/', function(){
                     json_encode($this->model->producto->ListarProducto($args['productoid'],$args['idioma']))
                   );
     });
+        $this->get('listaridiomas',function($request, $response, $args){//recibe l=limite, p=pagina
+      return $response ->withHeader('Content-type', 'application/json')
+                  ->write(
+                    json_encode($this->model->producto->ListarIdiomas())
+                  );
+    });
   });
 
 ?>

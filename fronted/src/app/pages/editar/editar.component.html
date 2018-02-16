@@ -1,3 +1,10 @@
 <p>
     Vale, estoy modificando éste archivo. he agregado mas cosas no se porque
 </p>
+
+<div class="form-group">
+    <label for="exampleSelect2">Idioma</label>
+    <select class="form-control" id="exampleSelect2">
+        <option *ngFor="let idioma of idiomas" value="{{idioma.idioma_codigo}}"><p class="text-capitalize">{{idioma.idioma_codigo}}</p></option>
+      </select>
+</div>

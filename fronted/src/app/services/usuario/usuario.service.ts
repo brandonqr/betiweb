@@ -85,4 +85,9 @@ obtenerMisProductos() {
         console.log( res );
       });
  }
+ obtenerIdiomas() {
+   const url = URL_SERVICIOS + '/producto/listaridiomas';
+   return this.http.get(url).map((res: any) => res);
+
+ }
 }

@@ -209,6 +209,13 @@ class ProductoModel{
      }
      
   }
+  public function ListarIdiomas(){
+        return $this->db->from('idiomas')
+                     ->fetchAll();//cuando queremos retornar varios registros.
+                     //$this->response->producto = $producto;
+                    // $this->response->producto['pass']='aa';
+                   
+  }
 
 }
 ?>

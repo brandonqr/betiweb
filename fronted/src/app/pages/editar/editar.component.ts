@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from '../../services/usuario/usuario.service';
 
 @Component({
   selector: 'app-editar',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class EditarComponent implements OnInit {
-
-  constructor() { }
+idiomas: any;
+  constructor(
+    public _usuarioService: UsuarioService
+  ) { }
 
   ngOnInit() {
+     this._usuarioService.obtenerIdiomas().subscribe(
+      res => {
+      this.idiomas = res;
+      console.log(this.idiomas)
+      ;
+      }
+    );
   }
 
 }
